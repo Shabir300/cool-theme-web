@@ -1,0 +1,586 @@
+1) how to add gradient frames to images??
+
+
+2)  how to move the next and prev btns of the image flipper outside of its div??
+
+
+3) from 2, and how to add that back images getting smaller design??
+
+
+4) why can't i set inner shadow on the features-image??
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+h1 {
+    line-height: 145%;
+    /* font-size: 50px; */
+    font-size: 10vw;
+    font-weight: medium;
+}
+
+h2 {
+    line-height: 145%;
+    font-size: 36px;
+    font-weight: medium;
+}
+
+h3 {
+    line-height: 145%;
+    font-size: 24px;
+    font-weight: medium;
+}
+
+
+
+:root {
+    --primary-color: #b00404;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    font-family: 'Xanh Mono', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+
+button {
+    font-family: 'Xanh Mono', sans-serif;
+    font-size: 1.2rem;
+}
+
+
+/* LANDING PAGE 1 */
+
+.landing-page {
+    width: 100%;
+    height: 100vh;
+    background: url('assets/static\ red\ back\ car.webp');
+    background-color: rgb(110, 108, 108);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:multiply;
+    
+    /* position: relative; */
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.landing-page .logo {
+    width: 7rem;
+}
+
+.landing-page nav {
+    display: none;
+}
+
+.landing-page nav ul{
+    width: 60vw;
+    display: flex;
+    justify-items: space-between;
+    justify-content: space-between;
+    /* gap: 2rem; */
+}
+
+.landing-page nav ul li {
+    list-style-type: none;
+    font-size: 1.2rem;
+    padding: .6rem;
+}
+
+.landing-page nav ul li:hover {
+    background: var(--primary-color);
+    /* color: black; */
+}
+
+.landing-page .social-media i:hover{
+    color: red;
+}
+
+.landing-page .social-media {
+    display: flex;
+    gap: .7rem;
+}
+
+
+.landing-page .content {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100%;
+    align-self: center;
+    padding-bottom: 30vh;
+
+}
+
+.landing-page .content div h1 {
+    /* font-size: 10vw; */
+    font-size: 10vw;
+}
+
+
+.landing-page .content div p {
+    font-size: 1.6rem;
+}
+
+.purchase-btn {
+    padding: 1.2rem 1.8rem;
+    background: red;
+    color: white;
+    border: none;
+    margin-top: 2rem;
+    transition: 0.3s ease-in-out;
+    text-transform:uppercase;
+    border-radius: 7px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.purchase-btn:hover {
+    background: transparent;
+    color: red;
+    border: 1px solid red;
+    
+}
+
+
+.story-btn {
+    display: block;
+    margin-inline: auto;
+    margin-top: 3rem;
+    background: none;
+    color: white;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.story-btn:hover {
+    transform: translateY(10%);
+}
+
+.story-btn span {
+    display: block;
+    font-size: 1.8rem;
+    
+}
+
+
+
+/* SECTION 2 */
+
+.whitepaper {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./assets/fire\ car.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgb(39, 37, 37);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    justify-content: space-between;
+    justify-items: space-between;
+    align-items: center;
+}
+
+.whitepaper-images {
+    display: flex;
+    gap: 1rem;
+    /* width: 500px; */
+}
+
+.whitepaper-images button {
+    background: none;
+    color: white;
+    border: none;
+}
+
+.whitepaper-images img {
+    width: 300px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.section-title {
+    color: red;
+}
+
+
+
+.whitepaper .content .description {
+    padding-top: 3rem;
+    font-size: 0.9rem;
+    line-height: 150%;
+    opacity: 0.93;
+}
+
+.whitepaper .content h1 {
+    border-bottom: 2px solid white;
+}
+
+
+.features {
+    background-image: url('./assets/laptop.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(28, 26, 26);
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+
+.features-image {
+    width: 80vw;
+    
+    /* margin-inline: auto; */
+}
+
+
+.features-content {
+    position: relative;
+    width: 80vw;
+    margin-inline: auto;
+    /* height: 100%; */
+}
+
+.features-content h2 {
+    font-size: 3rem;
+}
+
+.inner-features-content {
+    padding-top: 1rem;
+}
+
+
+.inner-features-content h3 {
+    color: rgb(250, 0, 0);
+}
+
+.inner-features-content p {
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+}
+
+/* .features-content:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    background: white;
+    width: 20rem;
+    height: 2px;
+    transform:rotate(90deg);
+    margin-right: 1.5rem;
+} */
+
+
+/* SYSTEM REQUIREMENTS */
+
+.requirements {
+    width: 100%;
+    height: auto;
+    background-image: url('./assets/red\ bugatti.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position-x: 500px; */
+    background-color: rgb(77, 74, 74);
+    background-blend-mode: multiply;
+    padding: 5vw;
+}
+
+.requirements > .title {
+    /* width: 100vw; */
+    width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    /* font-size: xx-large; */
+}
+
+
+.requirements .options {
+    margin-inline: auto;
+    gap: 2rem;
+    font-size: 0.7rem;
+    width: 15rem;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+    
+}
+
+.requirements .options .option {
+    padding-inline: 3%;
+    padding-block: 3%;
+    text-align:left;
+    border: 1px solid white;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.requirements .options .option:after {
+    content: '';
+    position: absolute;
+    background-color: rgb(22, 21, 21);
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-blend-mode: multiply;
+}
+
+.requirements .options .option .title {
+    padding-bottom: .7rem;
+    font-size: large ;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* NEWSLETTER */ 
+
+.subscribe-to-submission {
+    width: 100%;
+    height: auto;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.subscribe-to-submission .colLeft .image {
+    width: 400px;
+    margin-inline: auto;
+}
+
+
+.subscribe-to-submission .colRight {
+    padding: 3% 0% 3% 3%;
+}
+
+
+.subscribe-to-submission .colRight .content h2 { 
+    padding-bottom: 1rem;
+}
+
+.subscribe-to-submission .colRight .input {
+    padding-top: 3rem;
+}
+
+.subscribe-to-submission .colRight .input input {
+    padding-block: 1rem;
+    padding-left: 20px;
+    width: 100%;
+    background: rgb(55, 53, 53);
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+
+.subscribe-to-submission .colRight .input button {
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    background: red;
+    color: white;
+    border-radius: 10px;
+    margin-top: 2rem;
+    word-wrap: normal;
+}
+
+.subscribe-to-submission .colRight .input button:hover {
+    background: none;
+    color: red;
+    border: 1px solid red;
+}
+
+
+footer {
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5%;
+    gap: 1rem;
+    padding-block: 1rem;
+}
+
+footer img {
+    width: 5rem;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1000px) {
+
+    html {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    .landing-page nav {
+        display: unset;
+    }
+
+    .landing-page .content div h1 {
+        font-size: 7vw;
+    }
+
+    
+    /* section 2 // whitepaper */
+
+    .whitepaper {
+        flex-direction: row;
+        gap: 4rem;
+        justify-items: space-between;
+        justify-content: space-between;
+        padding: 10vw;
+    }
+
+    .whitepaper .content {
+        width: 50vw;
+    }
+
+
+    /* FEATURES */ 
+
+    .features {
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .features-content {
+        width: unset;
+    }
+    
+    .features-image {
+        width: unset;
+    }
+
+
+    /* REQUIREMENTS */
+
+    .requirements > .title {
+        font-size: 1.5vw;
+    }
+
+    .requirements .title h2 {
+        font-size: 4vw;
+    }
+
+    .requirements .options {
+        width: 30rem;
+        margin-inline: 3vw;
+        gap: 0;
+    }
+
+    .requirements .options .option {
+        width: 50%;
+    }
+
+    .requirements {
+        height: 120vh;
+    }
+
+    /* NEWSLETTER */
+
+    .subscribe-to-submission {
+        padding: 5vw;
+        flex-direction: row;
+        gap: clamp(2rem, 10%, 40rem);
+    }
+
+    /* .subscribe-to-submission .image {
+        width: 30%;
+    } */
+
+    .subscribe-to-submission .colRight {
+        width: 50%;
+        padding-inline: 1%;
+    }
+
+    .subscribe-to-submission .colRight .content p {
+        font-size: .85rem;
+        letter-spacing: .5px;
+        line-height: 130%;
+    }
+
+    .subscribe-to-submission .colRight .input {
+        height: 7rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+    }
+
+    .subscribe-to-submission .colRight .input input {
+        width: unset;
+        font-size: 1rem;
+    }
+
+    .subscribe-to-submission .colRight .input button {
+        height: 90%;
+        align-self: end;
+        margin: 0;
+        padding-block: 0;
+
+    }
+
+    .subscribe-to-submission .colLeft .image {
+        width: 100%;
+    }
+}
